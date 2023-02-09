@@ -1,5 +1,7 @@
 <?php
 
+Use App\Http\Controllers\jenisController;
+Use App\Http\Controllers\MereksController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 Use App\Http\Controllers\BarangController;
@@ -24,5 +26,11 @@ Auth::routes();
 
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::resource('mereks', MereksController::class);
+Route::resource('jeniss', JenisController::class);
+
+=======
 Route::resource('barangs', BarangController::class);
 Route::resource('peminjamans', PeminjamanController::class);
+
