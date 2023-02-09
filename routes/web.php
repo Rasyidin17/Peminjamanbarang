@@ -25,5 +25,5 @@ Auth::routes();
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('mereks', MereksController::class);
-Route::resource('jenis', JenisController::class);
+Route::resource('jeniss', JenisController::class);
 
